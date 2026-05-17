@@ -151,6 +151,18 @@ h5, h6, .font-weight-medium {
 }
 
 /* Carousel Section */
+.carousel-item {
+    height: 75vh;
+    min-height: 450px;
+    background-color: var(--dark);
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
 .carousel-caption {
     top: 0;
     left: 0;
@@ -161,6 +173,10 @@ h5, h6, .font-weight-medium {
 }
 
 @media (max-width: 576px) {
+    .carousel-item {
+        height: 60vh;
+        min-height: 380px;
+    }
     .carousel-caption h4 {
         font-size: 16px;
         font-weight: 500 !important;
