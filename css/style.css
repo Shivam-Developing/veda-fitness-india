@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Veda Fitness India - Upgraded Premium Stylesheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #F59E0B;          /* Saffron Gold */
+    --primary-rgb: 245, 158, 11;
+    --primary-hover: #D97706;    /* Dark Saffron */
+    --secondary: #94A3B8;        /* Muted Slate Gray */
+    --light: #F8FAFC;            /* Clean light text */
+    --dark: #0A0F1D;             /* Deep luxury midnight black */
+    --dark-surface: #141B2D;     /* Premium slate card background */
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6,
+.font-weight-bold, .font-weight-semi-bold, .font-weight-medium {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+h1, h2, .font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3, h4, .font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5, h6, .font-weight-medium {
+    font-weight: 500 !important;
+}
+
+/* Base Components & Buttons */
+.btn {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background-color: transparent;
+    border: 2px solid var(--light);
+    color: var(--light);
+}
+
+.btn-light:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+.btn-square {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 50px;
+    height: 50px;
+}
+
+/* Flaticon fixes */
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+    font-size: inherit;
+    margin-left: 0;
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50px;
+    z-index: 99;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Header & Floating Glassmorphism Navbar */
+.navbar-dark {
+    background: rgba(10, 15, 29, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Outfit', sans-serif;
+    margin-right: 15px;
+    padding: 30px 10px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand h1 {
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 12px 0;
+    }
+}
+
+/* Carousel Section */
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(10, 15, 29, 0.4) 0%, rgba(10, 15, 29, 0.85) 100%);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 16px;
+        font-weight: 500 !important;
+    }
+    .carousel-caption h1 {
+        font-size: 28px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(20, 27, 45, 0.6);
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--primary);
+}
+
+.bg-hero {
+    background: linear-gradient(rgba(10, 15, 29, 0.85), rgba(10, 15, 29, 0.85)), url(../img/carousel-1.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+/* Custom Program Section */
+.programe::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 45px);
+    top: 135px;
+    left: 0;
+    background: var(--dark-surface);
+    z-index: -1;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bg-light-custom {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bg-light-custom:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
+}
+
+/* Class Timetable */
+.nav-pills .nav-link.active {
+    background-color: var(--primary) !important;
+    color: var(--dark) !important;
+    font-weight: 600;
+}
+
+.bg-dark-custom {
+    background-color: var(--dark-surface) !important;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.bg-dark-custom:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+}
+
+/* Team Component */
+.team-item img {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-item:hover img {
+    transform: scale(1.08);
+}
+
+.team-item .team-overlay {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 15, 29, 0.9);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+/* Testimonials Owl Carousel */
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: start;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    background: var(--primary);
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--primary-hover);
+    color: #FFFFFF;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 90px;
+    height: 90px;
+    border: 3px solid var(--primary);
+}
+
+/* Blog Component */
+.blog-item img {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-item:hover img {
+    transform: scale(1.08);
+}
+
+.blog-item {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Footer Section Credits */
+.credit {
+    background: transparent;
+}
+
+.footer-border-top {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Forms styling */
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--light) !important;
+    border-radius: 6px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.15);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--dark-surface);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
